@@ -2,20 +2,25 @@ import "./sidebar.scss"
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
-import CreditCardIcon from "@mui/icons-material/CreditCard";
+import ContactsOutlinedIcon from '@mui/icons-material/ContactsOutlined';
 import StoreIcon from "@mui/icons-material/Store";
-import InsertChartIcon from "@mui/icons-material/InsertChart";
-import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
+import {Link} from "react-router-dom"
+
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
-import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
-import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSystemDaydreamOutlined";
-import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
+
+
+
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+
+
 const Sidebar = () => {
   return (
     <div className='sideBar'>
     <div className="top">
-    <span className="logo">lamaadmin</span>
+        <Link to="/" style={{ textDecoration: "none"}}>
+        <span className="logo">Tessrac</span>
+        </Link>
+    <span className="logo"></span>
     </div>
     <hr />
     <div className="center">
@@ -26,41 +31,25 @@ const Sidebar = () => {
                 <span>Dashboard</span>
             </li>
             <p className="title">LISTS</p>
+            <Link to="/users" style={{ textDecoration: "none"}}>
             <li>
                 <PersonOutlineOutlinedIcon className="icon"/>
                 <span>Users</span>
             </li>
+            </Link>
             <li>
             <StoreIcon className="icon" />
                 <span>Products</span>
             </li>
             <li>
-            <CreditCardIcon className="icon"/>
-                <span>Delivery</span>
+            <ContactsOutlinedIcon className="icon"/>
+                <span>Contacts</span>
             </li>
-            <p className="title">USEFUL</p>
-            <li>
-            <InsertChartIcon className="icon"/>
-                <span>Stats</span>
-            </li>
-            <li>
-            <NotificationsNoneIcon className="icon"/>
-                <span>Notifications</span>
-            </li>
-            <p className="title">SERVICE</p>
-            <li>
-            <SettingsSystemDaydreamOutlinedIcon className="icon"/>
-                <span>System Health</span>
-            </li>
-            <li>
-            <PsychologyOutlinedIcon className="icon"/>
-                <span>Logs</span>
-            </li>
-            <li>
-            <SettingsApplicationsIcon className="icon"/>
-                <span>Settings</span>
-            </li>
-            <p className="title">USER</p>
+            
+           
+           
+            
+            
             <li>
             <AccountCircleOutlinedIcon className="icon"/>
                 <span>Profile</span>
