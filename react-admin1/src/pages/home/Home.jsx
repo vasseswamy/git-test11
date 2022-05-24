@@ -7,6 +7,10 @@ import Chart from "../../components/chart/Chart";
 import Table from "../../components/table/Table";
 
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+
+
 
 
 
@@ -17,6 +21,7 @@ const Home = () => {
         <Sidebar />
         <div className="homecontainer">
           <Navbar />
+          
           <div className="widgets">
             <Widget  type="user"/>
             <Widget  type="order"/>
@@ -30,7 +35,7 @@ const Home = () => {
             <div className="listTitle">Latest Transactions</div>
       
             <Table />
-           
+          
             </div>
             
           </div>
